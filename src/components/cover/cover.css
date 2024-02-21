@@ -1,0 +1,53 @@
+.body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  transition: 5s;
+  background-position: center;
+  animation-name: animation;
+  animation-direction: alternate-reverse;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Background opacity */
+  padding: 20px;
+  transition: transform 0.3s ease-in-out; /* Transition for hover effect */
+}
+
+.text-overlay:hover {
+  transform: translate(
+    -50%,
+    -55%
+  ); /* Move text overlay slightly upwards on hover */
+}
+
+@keyframes animation {
+  0% {
+    background-image: url("/front-view-couple-kissing-bird-watching-shelter_23-2148243203.jpg");
+  }
+  50% {
+    background-image: url("/lovely-couple-love-kissing-park_8353-5412.jpg");
+  }
+  100% {
+    background-image: url("/man-woman-are-sitting-bench-kissing_1321-516.jpg");
+  }
+  150% {
+    background-image: url("/silhouette-young-couple-field_1301-5841.jpg");
+  }
+}

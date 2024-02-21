@@ -1,24 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const links = [
   {
-    title: "Homepage",
+    title: "Home",
     path: "/",
   },
   {
-    title: "About",
-    path: "/about",
+    title: "Our Story",
+    path: "/ourStory",
+  },
+  {
+    title: "Confession",
+    path: "/confession",
+  },
+  {
+    title: "Gallery",
+    path: "/gallery",
   },
   {
     title: "Contact",
     path: "/contact",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
   },
 ];
 
@@ -34,8 +39,19 @@ const NavPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/">
-              <div className="text-white text-lg font-semibold">Logo</div>
+            <Link
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Hello world!"
+              href="/"
+            >
+              <Image
+                src="/kiss-love-couple-clip-art-kiss.jpg"
+                height={60}
+                width={60}
+                alt="logo"
+                className="rounded rounded-full"
+                title="Kiss me hardly"
+              />
             </Link>
           </div>
           <div className="hidden md:block">
